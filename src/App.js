@@ -6,12 +6,7 @@ export default function App() {
   const [num, setNum] = useState(123456789);
   function redirect(e) {
     e.preventDefault();
-    window.open(
-      `https://web.whatsapp.com/send/?phone=%2B${num.replace(
-        /\D/g,
-        ''
-      )}&text&type=phone_number&app_absent=0`
-    );
+    window.open(`https://wa.me/%2B${num.replace(/\D/g, '')}`);
   }
   return (
     <div className='container'>
